@@ -1,5 +1,5 @@
 var selectSound = (key) => {
-  keyAudio = new Audio().toLowercase();
+  keyAudio = new Audio();
   keyAudio.volume = 0.3; //ปรับเสียง 30%
   switch (key) {
     case "w":
@@ -43,7 +43,7 @@ var eventkeyboard = () => {
   });
 
   $(document).keyup((valueUp) => {
-    let { key } = valueUp;
+    let { key } = valueUp.toLowerCase();
     document.querySelector(`.${key}`).classList.remove("hitted");
   });
 };
