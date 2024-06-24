@@ -1,7 +1,7 @@
 var selectSound = (key) => {
   keyAudio = new Audio();
   keyAudio.volume = 0.3; //ปรับเสียง 30%
-  switch (key) {
+  switch (key.toLowerCase()) {
     case "w":
       keyAudio.src = "sounds/tom-1.mp3";
     case "a":
@@ -30,7 +30,7 @@ var selectSound = (key) => {
 var eventClick = () => {
   $("button").click((value) => {
     let { innerHTML } = value.target;
-    selectSound(innerHTML.toLowerCase());
+    selectSound(innerHTML);
   });
 };
 
