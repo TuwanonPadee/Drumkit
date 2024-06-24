@@ -29,7 +29,7 @@ var selectSound = (key) => {
 
 var eventClick = () => {
   $("button").click((value) => {
-    let { innerHTML } = value.target;
+    let { innerHTML } = value.target.toLowerCase();
     selectSound(innerHTML);
   });
 };
@@ -43,7 +43,7 @@ var eventkeyboard = () => {
   });
 
   $(document).keyup((valueUp) => {
-    let { key } = valueUp.toLowerCase();
+    let { key } = valueUp;
     document.querySelector(`.${key}`).classList.remove("hitted");
   });
 };
