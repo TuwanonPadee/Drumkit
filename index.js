@@ -1,5 +1,5 @@
 var selectSound = (key) => {
-  keyAudio = new Audio();
+  keyAudio = new Audio().lowercase();
   keyAudio.volume = 0.3; //ปรับเสียง 30%
   switch (key) {
     case "w":
