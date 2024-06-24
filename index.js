@@ -29,8 +29,8 @@ var selectSound = (key) => {
 
 var eventClick = () => {
   $("button").click((value) => {
-    let { innerHTML } = value.target.toLowerCase();
-    selectSound(innerHTML);
+    let { innerHTML } = value.target;
+    selectSound(innerHTML.toLowerCase());
   });
 };
 
